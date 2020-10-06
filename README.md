@@ -1,6 +1,17 @@
-# for pandaboi's cool bot
+# For [PandaBoi](https://github.com/SatanPanda)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### A nice MERN stack site, as promised.
+
+#### Made with:
+
+- TypeScript
+- React
+- NodeJS
+- The awesome Discord API
+
+and a whole lot of ☕
+
+##### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Resources
 
