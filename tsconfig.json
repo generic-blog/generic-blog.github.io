@@ -20,9 +20,9 @@
     "noUnusedParameters": true,
     "incremental": true,
     "noFallthroughCasesInSwitch": true,
-    "rootDir": "web/src",
+    "rootDir": "src",
     "outDir": "build"
   },
-  "include": ["web/src/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "build"]
 }

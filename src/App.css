@@ -11,21 +11,22 @@
   --ff-secondary: "Josefin Sans", sans-serif;
 
   --fs-h1: 3rem;
-  --fs-h2: 2.5rem;
-  --fs-h3: 1.5rem;
+  --fs-h2: 2.15rem;
+  --fs-h3: 1.8rem;
   --fs-body: 1rem;
 
+  --clr-black: #191a1d;
   --clr-dark: #1e2125;
   --clr-light: #f8f8f8;
-  --clr-light-grey: #eeeeee;
+  --clr-light-grey: #cdcdcd;
   --clr-dark-grey: #4e4e4e;
 }
 
 @media (min-width: 800px) {
   :root {
     --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
-    --fs-h3: 1.8rem;
+    --fs-h2: 3.25rem;
+    --fs-h3: 2rem;
     --fs-body: 1.25rem;
   }
 }
@@ -33,8 +34,8 @@
 @media (min-width: 1200px) {
   :root {
     --fs-h1: 5.2rem;
-    --fs-h2: 4rem;
-    --fs-h3: 2rem;
+    --fs-h2: 3.65rem;
+    --fs-h3: 2.25rem;
     --fs-body: 1.4rem;
   }
 }
@@ -42,8 +43,8 @@
 @media (min-width: 1500px) {
   :root {
     --fs-h1: 5.5rem;
-    --fs-h2: 4.2rem;
-    --fs-h3: 2.15rem;
+    --fs-h2: 3.8rem;
+    --fs-h3: 2.5rem;
     --fs-body: 1.5rem;
   }
 }
@@ -51,8 +52,8 @@
 @media (min-width: 1750px) {
   :root {
     --fs-h1: 5.75rem;
-    --fs-h2: 4.35rem;
-    --fs-h3: 2.25rem;
+    --fs-h2: 4rem;
+    --fs-h3: 2.75rem;
     --fs-body: 1.75rem;
   }
 }
@@ -60,14 +61,16 @@
 @media (min-width: 2000px) {
   :root {
     --fs-h1: 6.1rem;
-    --fs-h2: 4.35rem;
-    --fs-h3: 2.25rem;
+    --fs-h2: 4.1rem;
+    --fs-h3: 3rem;
     --fs-body: 1.9rem;
   }
 }
 
 html {
   overflow-x: hidden;
+  overscroll-behavior: none;
+  background-color: var(--clr-dark);
 }
 
 body {
