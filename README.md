@@ -2,7 +2,16 @@
 
 ### A nice MERN stack site, as promised.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Made with:
+
+- TypeScript
+- React
+- NodeJS
+- The awesome Discord API
+
+and a whole lot of ☕
+
+##### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Resources
 
