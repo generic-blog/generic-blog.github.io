@@ -1,4 +1,6 @@
-# for pandaboi's cool bot
+# For [PandaBoi](https://github.com/SatanPanda)
+
+### A nice MERN stack site, as promised.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
