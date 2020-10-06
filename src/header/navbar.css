@@ -22,7 +22,7 @@
 .links {
   display: flex;
   min-width: 400px;
-  margin-left: 1rem;
+  padding: 0.25rem 2rem;
   justify-content: space-around;
 }
 
