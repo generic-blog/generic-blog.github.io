@@ -9,29 +9,29 @@ export default class NavBar extends React.Component {
           <div className="logo-container">
             <h1 className="logo">The Archive</h1>
           </div>
-          <div className="links">
-            <div className="link-container">
-              <a href="#lorum" className="link">
+          <div className="navlinks">
+            <div className="navlink-container">
+              <a href="#lorum" className="navlink">
                 Lorum
               </a>
             </div>
-            <div className="link-container">
-              <a href="#ipsum" className="link">
+            <div className="navlink-container">
+              <a href="#ipsum" className="navlink">
                 Ipsum
               </a>
             </div>
-            <div className="link-container">
-              <a href="#dolor" className="link">
+            <div className="navlink-container">
+              <a href="#dolor" className="navlink">
                 Dolor
               </a>
             </div>
-            <div className="link-container">
-              <a href="#sit" className="link">
+            <div className="navlink-container">
+              <a href="#sit" className="navlink">
                 Sit
               </a>
             </div>
-            <div className="link-container">
-              <a href="#amet" className="link">
+            <div className="navlink-container">
+              <a href="#amet" className="navlink">
                 Amet
               </a>
             </div>

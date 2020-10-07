@@ -1,0 +1,53 @@
+/* 
+
+Friend this person on discord:
+</ColdDeveloper>#9408
+
+*/
+
+section.landing {
+  display: grid;
+  place-items: center;
+  min-height: 500px;
+}
+
+h2.title {
+  color: var(--clr-light);
+  font-weight: 300;
+  font-size: var(--fs-h1);
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 32px 4px;
+}
+
+hr.line {
+  max-width: 65%;
+  margin: 0 auto;
+  background-color: var(--clr-blue);
+  color: var(--clr-blue);
+  border: 1px solid var(--clr-dark-grey);
+}
+
+div.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.landinglink {
+  flex: 1;
+  text-align: center;
+  max-width: 200px;
+  text-decoration: none;
+  color: var(--clr-blue);
+  font-size: var(--fs-h3);
+}
+
+@media (min-width: 800px) {
+  section.landing {
+    min-height: 600px;
+  }
+  hr.line {
+    max-width: 55%;
+  }
+}
