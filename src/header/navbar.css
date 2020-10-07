@@ -19,24 +19,30 @@
   place-items: center;
 }
 
-.links {
+.navlinks {
   display: flex;
   min-width: 400px;
-  padding: 0.25rem 2rem;
+  padding: 0.25rem 0 0.25rem 2rem;
   justify-content: space-around;
 }
 
-.link-container {
+.navlink-container {
   padding: 8px 16px;
 }
 
-.link {
+.navlink {
   color: var(--clr-light-grey);
   text-decoration: none;
   font-size: calc(var(--fs-body) - 0.1rem);
   transition: 0.2s color ease;
 }
 
-.link:hover {
+.navlink:hover {
   color: var(--clr-light);
+}
+
+@media (min-width: 1500px) {
+  .navlinks {
+    padding: 0.25rem 0 0.25rem 4rem;
+  }
 }

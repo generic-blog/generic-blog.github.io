@@ -19,7 +19,8 @@
   --clr-dark: #1e2125;
   --clr-light: #f8f8f8;
   --clr-light-grey: #cdcdcd;
-  --clr-dark-grey: #4e4e4e;
+  --clr-dark-grey: #585858;
+  --clr-blue: #00adef;
 }
 
 @media (min-width: 800px) {
