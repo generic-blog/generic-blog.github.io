@@ -8,6 +8,10 @@ authRouter.get("/", (req, res) => {
   });
 });
 
+authRouter.get("/redirect", (req, res) => {
+  res.send(200);
+});
+
 authRouter.get("/failure", (req, res) => {
   res.json({
     msg: "Failure",
