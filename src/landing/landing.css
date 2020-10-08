@@ -9,6 +9,7 @@ section.landing {
   display: grid;
   place-items: center;
   min-height: 500px;
+  background-color: var(--clr-dark);
 }
 
 h2.title {
@@ -50,4 +51,22 @@ div.buttons {
   hr.line {
     max-width: 55%;
   }
+}
+
+div.wave-container {
+  background-color: var(--clr-dark);
+  padding: 0;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+svg.wave {
+  width: 100%;
+}
+
+path#wave {
+  width: 800px;
 }

@@ -15,7 +15,7 @@
   --fs-h3: 1.8rem;
   --fs-body: 1rem;
 
-  --clr-black: #191a1d;
+  --clr-black: #18181c;
   --clr-dark: #1e2125;
   --clr-light: #f8f8f8;
   --clr-light-grey: #cdcdcd;
@@ -71,7 +71,7 @@
 html {
   overflow-x: hidden;
   overscroll-behavior: none;
-  background-color: var(--clr-dark);
+  background-color: var(--clr-black);
 }
 
 body {

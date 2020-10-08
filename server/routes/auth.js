@@ -1,5 +1,4 @@
 const authExpress = require("express");
-const passport = require("passport");
 const authRouter = authExpress.Router();
 const authPassport = require("passport");
 
@@ -7,7 +6,7 @@ authRouter.get("/", authPassport.authenticate("discord"));
 
 authRouter.get(
   "/redirect",
-  passport.authenticate("discord", {
+  authPassport.authenticate("discord", {
     failureRedirect: "/forbidden",
   }),
   (req, res) => {
@@ -22,18 +21,18 @@ authRouter.get("/forbidden", (req, res) => {
   });
 });
 
-authRouter.get("/unauthorized", (req, res) => {
-  res.json({
-    msg: "Unauthorized",
-    status: 401,
-  });
-});
+// authRouter.get("/unauthorized", (req, res) => {
+//   res.json({
+//     msg: "Unauthorized",
+//     status: 401,
+//   });
+// });
 
-authRouter.get("/success", (req, res) => {
-  res.json({
-    msg: "Success",
-    status: 200,
-  });
-});
+// authRouter.get("/success", (req, res) => {
+//   res.json({
+//     msg: "Success",
+//     status: 200,
+//   });
+// });
 
 module.exports = authRouter;

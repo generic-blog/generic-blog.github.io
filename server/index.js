@@ -4,10 +4,15 @@ const app = express();
 const port = process.env.PORT || 3000;
 const session = require("express-session");
 const passport = require("passport");
-const discordStrategy = require("./strategies/discord");
+// const discordStrategy = require("./strategies/discord");
+// const db = require("./database/database");
+
+// db.then(() => {
+//   console.log("Connected");
+// }).catch((err) => console.log(err));
 
 const authRoute = require("./routes/auth");
-const dashboardRoute = require("./routes/dashboard");
+// const dashboardRoute = require("./routes/dashboard");
 
 app.use(
   session({
@@ -23,7 +28,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use("/auth", authRoute);
-app.use("/dashboard", dashboardRoute);
+// app.use("/dashboard", dashboardRoute);
 
 app.get("/", (req, res) => {
   res.json({
