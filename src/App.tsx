@@ -10,7 +10,11 @@ export class App extends React.Component {
       <div className="App">
         <NavBar />
         <Landing />
-        <Section flipped={false} img={{ src: "", alt: "" }} text={""} />
+        <Section
+          flipped={true}
+          img={{ src: "", alt: "" }}
+          text={"asdasofoasfnokfnoafnoa"}
+        />
       </div>
     );
   }

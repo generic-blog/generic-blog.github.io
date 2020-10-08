@@ -6,7 +6,7 @@ export default class Landing extends React.PureComponent {
     return (
       <>
         <section className="landing">
-          <main className="container">
+          <main className="main-landing">
             <h2 className="title">Lorum Ipsum Dolor</h2>
             <hr className="line" />
             <br />
@@ -25,9 +25,9 @@ export default class Landing extends React.PureComponent {
             <g
               id="g"
               stroke="none"
-              stroke-width="1"
+              strokeWidth="1"
               fill="none"
-              fill-rule="evenodd"
+              fillRule="evenodd"
             >
               <g
                 id="wave-path"

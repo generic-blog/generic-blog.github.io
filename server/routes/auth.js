@@ -1,20 +1,23 @@
-const authExpress = require("express");
-const authRouter = authExpress.Router();
-const authPassport = require("passport");
+const express = require("express");
+const router = express.Router();
+const passport = require("passport");
 
-authRouter.get("/", authPassport.authenticate("discord"));
+router.get("/", passport.authenticate("discord"));
 
-authRouter.get(
+router.get(
   "/redirect",
-  authPassport.authenticate("discord", {
+  passport.authenticate("discord", {
     failureRedirect: "/forbidden",
   }),
   (req, res) => {
-    res.send(200);
+    res.json({
+      msg: "Success",
+      status: 200,
+    });
   }
 );
 
-authRouter.get("/forbidden", (req, res) => {
+router.get("/forbidden", (req, res) => {
   res.json({
     msg: "Forbidden",
     status: 403,
@@ -35,4 +38,4 @@ authRouter.get("/forbidden", (req, res) => {
 //   });
 // });
 
-module.exports = authRouter;
+module.exports = router;

@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 const session = require("express-session");
 const passport = require("passport");
-// const discordStrategy = require("./strategies/discord");
+const discordStrategy = require("./strategies/discord");
 // const db = require("./database/database");
 
 // db.then(() => {
@@ -30,12 +30,12 @@ app.use(passport.session());
 app.use("/auth", authRoute);
 // app.use("/dashboard", dashboardRoute);
 
-app.get("/", (req, res) => {
-  res.json({
-    msg: "Hello!",
-    status: 200,
-  });
-});
+// app.get("/", (req, res) => {
+//   res.json({
+//     msg: "Hello!",
+//     status: 200,
+//   });
+// });
 
 app.listen(port, () => {
   console.log(`Now listening to requests from port ${port}`);

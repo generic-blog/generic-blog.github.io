@@ -1,8 +1,10 @@
 import React from "react";
+import "./section.css";
 
 export default class Section extends React.PureComponent {
   props: any;
   render() {
+    const { text, img } = this.props;
     return (
       <section className={this.props.className || "section"}>
         <main className="container">
@@ -10,27 +12,19 @@ export default class Section extends React.PureComponent {
             {this.props.flipped ? (
               <>
                 <div className="text-container">
-                  <p className="text">{this.props.text}</p>
+                  <p className="text">{text}</p>
                 </div>
                 <div className="image-container">
-                  <img
-                    src={this.props.img.src}
-                    alt={this.props.img.alt}
-                    className="image"
-                  />
+                  <img src={img.src} alt={img.alt} className="image" />
                 </div>
               </>
             ) : (
               <>
                 <div className="image-container">
-                  <img
-                    src={this.props.img.src}
-                    alt={this.props.img.alt}
-                    className="image"
-                  />
+                  <img src={img.src} alt={img.alt} className="image" />
                 </div>
                 <div className="text-container">
-                  <p className="text">{this.props.text}</p>
+                  <p className="text">{text}</p>
                 </div>
               </>
             )}
