@@ -38,6 +38,14 @@ div.buttons {
   text-decoration: none;
   color: var(--clr-blue);
   font-size: var(--fs-h4);
+  opacity: 0;
+  animation: 1s drop-in forwards ease;
+  animation-delay: 0.5s;
+  transition: 0.2s all ease;
+}
+
+.landinglink:hover {
+  color: var(--clr-light-blue);
 }
 
 @media (min-width: 500px) {
@@ -63,6 +71,18 @@ div.buttons {
   from {
     opacity: 0;
     transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
   }
 
   to {

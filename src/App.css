@@ -4,7 +4,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  border: var(--dev-border);
+  /* border: var(--dev-border); */
 }
 
 :root {
@@ -21,8 +21,9 @@
   --clr-dark: #1e2125;
   --clr-light: #f8f8f8;
   --clr-light-grey: #cdcdcd;
-  --clr-text: #d6d5d5;
+  --clr-text: #acacac;
   --clr-dark-grey: #585858;
+  --clr-light-blue: #32c5ff;
   --clr-blue: #00adef;
 
   --dev-border: 1px solid red;
@@ -88,8 +89,10 @@ body {
   margin: 0;
   font-family: var(--ff-primary);
   font-weight: 300;
+  color: var(--clr-text);
 }
 
 a {
   text-decoration: none;
+  color: unset;
 }

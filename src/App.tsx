@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Footer from "./footer/Footer";
 import NavBar from "./header/NavBar";
 import Landing from "./landing/Landing";
 import Section from "./sections/Section";
@@ -33,6 +34,7 @@ export class App extends React.Component {
           }
         />
         <Wave flipped={true} />
+        <Footer />
       </div>
     );
   }
