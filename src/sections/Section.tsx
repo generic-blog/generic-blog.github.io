@@ -6,29 +6,32 @@ export default class Section extends React.PureComponent {
   render() {
     const { text, img } = this.props;
     return (
-      <section className={this.props.className || "section"}>
+      <section
+        className={
+          (this.props.className || "section") +
+          (this.props.flipped ? "" : " flip")
+        }
+      >
         <main className="container">
-          <div className="flex-container">
-            {this.props.flipped ? (
-              <>
-                <div className="text-container">
-                  <p className="text">{text}</p>
-                </div>
-                <div className="image-container">
-                  <img src={img.src} alt={img.alt} className="image" />
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="image-container">
-                  <img src={img.src} alt={img.alt} className="image" />
-                </div>
-                <div className="text-container">
-                  <p className="text">{text}</p>
-                </div>
-              </>
-            )}
-          </div>
+          {this.props.flipped ? (
+            <>
+              <div className="text-container">
+                <p className="text">{text}</p>
+              </div>
+              <div className="image-container">
+                <img src={img.src} alt={img.alt} className="image" />
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="image-container">
+                <img src={img.src} alt={img.alt} className="image" />
+              </div>
+              <div className="text-container">
+                <p className="text">{text}</p>
+              </div>
+            </>
+          )}
         </main>
       </section>
     );

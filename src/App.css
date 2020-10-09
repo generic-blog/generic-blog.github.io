@@ -4,6 +4,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  border: var(--dev-border);
 }
 
 :root {
@@ -87,4 +88,8 @@ body {
   margin: 0;
   font-family: var(--ff-primary);
   font-weight: 300;
+}
+
+a {
+  text-decoration: none;
 }

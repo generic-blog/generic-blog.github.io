@@ -7,7 +7,9 @@ export default class NavBar extends React.Component {
       <header className="header">
         <nav className="nav">
           <div className="logo-container">
-            <h1 className="logo">The Archive</h1>
+            <a href="#the-archive" className="title-link">
+              <h1 className="logo">The Archive</h1>
+            </a>
           </div>
           <div className="navlinks">
             <div className="navlink-container">

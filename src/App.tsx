@@ -3,6 +3,7 @@ import "./App.css";
 import NavBar from "./header/NavBar";
 import Landing from "./landing/Landing";
 import Section from "./sections/Section";
+import Wave from "./wave/Wave";
 
 export class App extends React.Component {
   render() {
@@ -13,8 +14,25 @@ export class App extends React.Component {
         <Section
           flipped={true}
           img={{ src: "", alt: "" }}
-          text={"asdasofoasfnokfnoafnoa"}
+          text={
+            "asdsdasdndsansafhfshosafhsfhhfohafohfiohfiohfiohwfqiohwfqihfqwihwfqipqwfhpiqwfpasofoasasfisajgngosndahitwhdilhwelolsdosdiosdfilafilabilabileahbiulbbfwbwrbiawbwadjdagnonadfknsdkfosdfbjdsbjsfbjlfsnjkdfnjodfbibegibibjbfjdbjo;gawbieboeb;gedndneklbjgewbgewo;wbwabbwkb;obelbjdfbjsdzfnjdsno;szdfnffnokfnoafnoa"
+          }
         />
+        <Section
+          flipped={false}
+          img={{ src: "", alt: "" }}
+          text={
+            "asdsdasdndsansafhfshosafhsfhhfohafohfiohfiohfiohwfqiohwfqihfqwihwfqipqwfhpiqwfpasofoasasfisajgngosndahitwhdilhwelolsdosdiosdfilafilabilabileahbiulbbfwbwrbiawbwadjdagnonadfknsdkfosdfbjdsbjsfbjlfsnjkdfnjodfbibegibibjbfjdbjo;gawbieboeb;gedndneklbjgewbgewo;wbwabbwkb;obelbjdfbjsdzfnjdsno;szdfnffnokfnoafnoa"
+          }
+        />
+        <Section
+          flipped={true}
+          img={{ src: "", alt: "" }}
+          text={
+            "asdsdasdndsansafhfshosafhsfhhfohafohfiohfiohfiohwfqiohwfqihfqwihwfqipqwfhpiqwfpasofoasasfisajgngosndahitwhdilhwelolsdosdiosdfilafilabilabileahbiulbbfwbwrbiawbwadjdagnonadfknsdkfosdfbjdsbjsfbjlfsnjkdfnjodfbibegibibjbfjdbjo;gawbieboeb;gedndneklbjgewbgewo;wbwabbwkb;obelbjdfbjsdzfnjdsno;szdfnffnokfnoafnoa"
+          }
+        />
+        <Wave flipped={true} />
       </div>
     );
   }
