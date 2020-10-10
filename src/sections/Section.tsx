@@ -1,7 +1,7 @@
 import React from "react";
 import "./section.css";
 
-export default class Section extends React.PureComponent {
+export default class Section extends React.Component {
   props: any;
   render() {
     const { text, img } = this.props;

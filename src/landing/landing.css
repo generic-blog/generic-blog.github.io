@@ -1,7 +1,7 @@
 section.landing {
   display: grid;
   place-items: center;
-  min-height: 500px;
+  min-height: 550px;
   background-color: var(--clr-dark);
 }
 
@@ -60,10 +60,16 @@ div.buttons {
 
 @media (min-width: 800px) {
   section.landing {
-    min-height: 600px;
+    min-height: 625px;
   }
   hr.line {
     max-width: 55%;
+  }
+}
+
+@media (min-width: 1200px) {
+  section.landing {
+    min-height: 675px;
   }
 }
 

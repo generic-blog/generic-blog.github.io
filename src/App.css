@@ -4,7 +4,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* border: var(--dev-border); */
 }
 
 :root {
@@ -25,6 +24,7 @@
   --clr-dark-grey: #585858;
   --clr-light-blue: #32c5ff;
   --clr-blue: #00adef;
+  --clr-dark-blue: #0099cc;
 
   --dev-border: 1px solid red;
 }

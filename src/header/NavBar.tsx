@@ -1,7 +1,7 @@
 import React from "react";
 import "./navbar.css";
 
-export default class NavBar extends React.Component {
+export default class NavBar extends React.PureComponent {
   render() {
     return (
       <header className="header">
