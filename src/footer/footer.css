@@ -28,11 +28,44 @@ h2.mark::before {
   display: none;
 }
 
+h4.post-title {
+  display: none;
+  color: var(--clr-light-grey);
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+div.posts {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+}
+
+div.link-text {
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+a.post-link {
+  font-size: var(--fs-body);
+  transition: 0.2s all ease;
+}
+
+a.post-link:hover {
+  color: var(--clr-light-grey);
+}
+
 a.footer-link {
   color: var(--clr-blue);
   font-size: var(--fs-h4);
   text-align: center;
-  padding: 16px 0;
+  padding: 2px 0;
+  transition: 0.2s all ease;
+}
+
+a.footer-link:hover {
+  color: var(--clr-light-blue);
 }
 
 div.about {
@@ -71,10 +104,6 @@ a.invite:hover {
   transform: scale(1.1);
 }
 
-div.copyright-container-grid {
-  display: none;
-}
-
 div.copyright-container {
   width: 100%;
 }
@@ -110,6 +139,29 @@ p.copyright {
     width: calc(100vw / 2 - 180px);
   }
 
+  div.posts-container {
+    min-height: 175px;
+    padding: 1rem 0;
+    min-width: 20%;
+    text-align: center;
+  }
+
+  h4.post-title {
+    display: initial;
+    font-size: calc(var(--fs-h4) + 0.15rem);
+  }
+
+  div.posts {
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 175px;
+    padding: 0;
+  }
+
+  div.post {
+    text-align: center;
+  }
+
   .footer-flex {
     display: flex;
     flex-direction: row-reverse;
@@ -125,7 +177,11 @@ p.copyright {
   .footer-grid {
     margin: 0;
     max-width: unset;
-    width: 40%;
+    width: 35;
+  }
+
+  div.link-text {
+    place-items: unset;
   }
 
   a.footer-link {
@@ -133,15 +189,7 @@ p.copyright {
   }
 
   p.about-text {
-    font-size: calc(var(--fs-h4) + 0.2rem);
-  }
-
-  div.copyright-container-grid {
-    display: initial;
-  }
-
-  div.copyright-container {
-    display: none;
+    font-size: calc(var(--fs-h4) + 0.05rem);
   }
 }
 
@@ -159,11 +207,11 @@ p.copyright {
   }
 
   .footer-grid {
-    width: 45%;
+    width: 40%;
   }
 
   div.about {
-    width: 35%;
+    width: 40%;
   }
 
   p.about-text {
@@ -177,24 +225,28 @@ p.copyright {
     width: calc(100vw - 30rem);
   }
 
+  .footer-grid {
+    width: 42.5%;
+  }
+
   div.about {
-    width: 30%;
+    width: 35%;
   }
 
   p.about-text {
-    font-size: calc(var(--fs-h4) - 0.35rem);
+    font-size: calc(var(--fs-h4) - 0.15rem);
   }
 }
 
 @media (min-width: 1500px) {
   p.about-text {
-    font-size: calc(var(--fs-h4) - 0.5rem);
+    font-size: calc(var(--fs-h4) - 0.3rem);
   }
 }
 
 @media (min-width: 1800px) {
   p.about-text {
-    font-size: calc(var(--fs-h4) - 0.75rem);
+    font-size: calc(var(--fs-h4) - 0.5rem);
     padding-bottom: 2rem;
   }
 }

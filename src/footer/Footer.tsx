@@ -7,29 +7,56 @@ export default class Footer extends React.PureComponent {
       <footer className="footer">
         <h2 className="mark">The Archive</h2>
         <div className="footer-flex">
+          <div className="posts-container">
+            <h4 className="post-title">Articles</h4>
+            <div className="posts">
+              <div className="post">
+                <a href="#lorem" className="post-link">
+                  Lorem
+                </a>
+              </div>
+              <div className="post">
+                <a href="#ipsum" className="post-link">
+                  Ipsum
+                </a>
+              </div>
+              <div className="post">
+                <a href="#dolor" className="post-link">
+                  Dolor
+                </a>
+              </div>
+            </div>
+          </div>
           <div className="footer-grid">
-            <a href="#lorum" className="footer-link">
-              <div className="link-text">Lorum</div>
-            </a>
-            <a href="#ipsum" className="footer-link">
-              <div className="link-text">Ipsum</div>
-            </a>
-            <a href="#dolor" className="footer-link">
-              <div className="link-text">Dolor</div>
-            </a>
-            <a href="#sit" className="footer-link">
-              <div className="link-text">Sit</div>
-            </a>
-            <a href="#amet" className="footer-link">
-              <div className="link-text">Amet</div>
-            </a>
-            <a href="#discord" className="footer-link">
-              <div className="link-text">Discord</div>
-            </a>
-            <div className="copyright-container-grid">
-              <p className="copyright-grid">
-                Copyright &copy; Lost Studios 2020
-              </p>
+            <div className="link-text">
+              <a href="#lorem" className="footer-link">
+                Lorum
+              </a>
+            </div>
+            <div className="link-text">
+              <a href="#ipsum" className="footer-link">
+                Ipsum
+              </a>
+            </div>
+            <div className="link-text">
+              <a href="#dolor" className="footer-link">
+                Dolor
+              </a>
+            </div>
+            <div className="link-text">
+              <a href="#sit" className="footer-link">
+                Sit
+              </a>
+            </div>
+            <div className="link-text">
+              <a href="#amet" className="footer-link">
+                Amet
+              </a>
+            </div>
+            <div className="link-text">
+              <a href="#discord" className="footer-link">
+                Discord
+              </a>
             </div>
           </div>
           <div className="about">
@@ -41,10 +68,10 @@ export default class Footer extends React.PureComponent {
                 Invite
               </a>
             </div>
-            <div className="copyright-container">
-              <p className="copyright">Copyright &copy; Lost Studios 2020</p>
-            </div>
           </div>
+        </div>
+        <div className="copyright-container">
+          <p className="copyright">Copyright &copy; im-bad-at-css 2020</p>
         </div>
       </footer>
     );

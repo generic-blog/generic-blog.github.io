@@ -60,16 +60,10 @@ div.buttons {
 
 @media (min-width: 800px) {
   section.landing {
-    min-height: 625px;
+    min-height: 650px;
   }
   hr.line {
     max-width: 55%;
-  }
-}
-
-@media (min-width: 1200px) {
-  section.landing {
-    min-height: 675px;
   }
 }
 
