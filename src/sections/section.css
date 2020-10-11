@@ -1,5 +1,5 @@
 section.section {
-  min-height: 800px;
+  min-height: 500px;
   transform: translateY(32px);
   opacity: 0;
   visibility: hidden;
@@ -14,21 +14,20 @@ section.visible {
 
 main.container {
   max-width: 80%;
-  min-height: 500px;
+  min-height: 600px;
   margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
   place-items: center;
   justify-content: space-around;
-  min-height: 700px;
 }
 
 div.image-container,
 div.text-container {
   margin: 0;
   padding: 0;
-  max-height: 500px;
+  max-height: 400px;
   word-wrap: break-word;
 }
 
@@ -39,7 +38,7 @@ div.text-container {
 
 div.image-container {
   color: white;
-  min-height: 400px;
+  min-height: 300px;
   max-width: 70%;
   min-width: 70%;
 }
@@ -51,13 +50,17 @@ p.text {
   margin: 0;
 }
 
-section.flip .container {
-  flex-direction: column-reverse;
-}
-
 @media (min-width: 800px) {
   p.text {
     font-size: var(--fs-body);
+  }
+
+  main.container {
+    min-height: 700px;
+  }
+
+  div.image-container {
+    min-height: 400px;
   }
 }
 
@@ -68,7 +71,7 @@ section.flip .container {
 
   main.container {
     flex-direction: row;
-    min-height: 600px;
+    min-height: 500px;
   }
 
   div.image-container,
@@ -78,18 +81,23 @@ section.flip .container {
     height: 600px;
   }
 
-  section.flip .container {
-    flex-direction: unset;
+  section.flip main.container {
+    flex-direction: row-reverse;
   }
 }
 
 @media (min-width: 1200px) {
+  section.section {
+    min-height: 700px;
+  }
+
   p.text {
     font-size: calc(var(--fs-body) + 0.1rem);
   }
 
   main.container {
     max-width: 75%;
+    min-height: 600px;
     justify-content: space-around;
   }
 

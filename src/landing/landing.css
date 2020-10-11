@@ -16,6 +16,13 @@ h2.title {
   animation: 1s appear forwards ease;
 }
 
+p.subtitle {
+  text-align: center;
+  opacity: 0;
+  animation: 1s 0.2s appear forwards ease;
+  font-size: var(--fs-body);
+}
+
 hr.line {
   max-width: 65%;
   margin: 0 auto;
