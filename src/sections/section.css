@@ -1,5 +1,15 @@
-section {
+section.section {
   min-height: 800px;
+  transform: translateY(32px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s all ease-out;
+}
+
+section.visible {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
 }
 
 main.container {

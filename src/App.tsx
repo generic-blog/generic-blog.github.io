@@ -1,43 +1,19 @@
 import React from "react";
-import "./App.css";
-import Footer from "./footer/Footer";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./header/NavBar";
-import Landing from "./landing/Landing";
-import Section from "./sections/Section";
-import Wave from "./wave/Wave";
+import Home from "./Home";
+import NotFound from "./notfound/NotFound";
 
-export class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
-      <div className="App">
+      <Router>
         <NavBar />
-        <Landing />
-        <Section
-          flipped={true}
-          img={{ src: "", alt: "" }}
-          text={
-            "asdsdasdndsansafhfshosafhsfhhfohafohfiohfiohfiohwfqiohwfqihfqwihwfqipqwfhpiqwfpasofoasasfisajgngosndahitwhdilhwelolsdosdiosdfilafilabilabileahbiulbbfwbwrbiawbwadjdagnonadfknsdkfosdfbjdsbjsfbjlfsnjkdfnjodfbibegibibjbfjdbjo;gawbieboeb;gedndneklbjgewbgewo;wbwabbwkb;obelbjdfbjsdzfnjdsno;szdfnffnokfnoafnoa"
-          }
-        />
-        <Section
-          flipped={false}
-          img={{ src: "", alt: "" }}
-          text={
-            "asdsdasdndsansafhfshosafhsfhhfohafohfiohfiohfiohwfqiohwfqihfqwihwfqipqwfhpiqwfpasofoasasfisajgngosndahitwhdilhwelolsdosdiosdfilafilabilabileahbiulbbfwbwrbiawbwadjdagnonadfknsdkfosdfbjdsbjsfbjlfsnjkdfnjodfbibegibibjbfjdbjo;gawbieboeb;gedndneklbjgewbgewo;wbwabbwkb;obelbjdfbjsdzfnjdsno;szdfnffnokfnoafnoa"
-          }
-        />
-        <Section
-          flipped={true}
-          img={{ src: "", alt: "" }}
-          text={
-            "asdsdasdndsansafhfshosafhsfhhfohafohfiohfiohfiohwfqiohwfqihfqwihwfqipqwfhpiqwfpasofoasasfisajgngosndahitwhdilhwelolsdosdiosdfilafilabilabileahbiulbbfwbwrbiawbwadjdagnonadfknsdkfosdfbjdsbjsfbjlfsnjkdfnjodfbibegibibjbfjdbjo;gawbieboeb;gedndneklbjgewbgewo;wbwabbwkb;obelbjdfbjsdzfnjdsno;szdfnffnokfnoafnoa"
-          }
-        />
-        <Wave flipped={true} />
-        <Footer />
-      </div>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/" component={NotFound} />
+        </Switch>
+      </Router>
     );
   }
 }
-
-export default App;

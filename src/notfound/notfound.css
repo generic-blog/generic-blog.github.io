@@ -1,0 +1,38 @@
+main.not-found {
+  min-height: 700px;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  display: grid;
+  place-items: center;
+}
+
+.error {
+  margin: 0;
+  text-align: center;
+  font-weight: 300;
+  font-size: calc(var(--fs-h0) * 2);
+}
+
+.message {
+  margin: 0;
+  text-align: center;
+  font-weight: 300;
+  font-size: var(--fs-h2);
+}
+
+.go-home {
+  color: var(--clr-blue);
+  text-align: center;
+  font-size: var(--fs-h4);
+  transition: 0.2s all ease;
+}
+
+.go-home:hover {
+  color: var(--clr-light-blue);
+}
+
+@media (min-width: 800px) {
+  .message {
+    font-size: calc(var(--fs-h2) - 0.5rem);
+  }
+}
