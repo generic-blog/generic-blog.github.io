@@ -1,13 +1,13 @@
-# For [PandaBoi](https://github.com/SatanPanda)
+# Star all of [PandaBoi](https://github.com/SatanPanda)'s stuff
 
-### A nice MERN stack site, as promised.
+### A nice ~~MERN stack~~ pure React TypeScript site, ~~as promised~~ full of crap code.
 
 #### Made with:
 
 - TypeScript
 - React
 - NodeJS
-- The awesome Discord API
+- Yarn
 
 and a whole lot of ☕
 
