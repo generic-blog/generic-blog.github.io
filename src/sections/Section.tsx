@@ -1,11 +1,20 @@
 import React, { createRef } from "react";
 import "./section.css";
 
+interface Props {
+  text?: string;
+  img: {
+    src: string;
+    alt: string;
+  };
+  flipped?: boolean;
+  className?: string;
+}
+
 export default class Section extends React.Component<
-  {},
+  Props,
   { isVisible: boolean }
 > {
-  props: any;
   domRef: React.RefObject<HTMLElement>;
   constructor(props: any) {
     super(props);

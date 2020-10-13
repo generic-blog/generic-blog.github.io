@@ -1,8 +1,11 @@
 import React from "react";
 import "./wave.css";
 
-export default class Wave extends React.PureComponent {
-  props: any;
+interface Props {
+  flipped?: boolean;
+}
+
+export default class Wave extends React.PureComponent<Props> {
   render() {
     return (
       <div className={"wave-container" + (this.props.flipped ? "-flip" : "")}>
