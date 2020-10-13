@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../footer/Footer";
 import Intro from "../intro/Intro";
 import Section from "../sections/Section";
 import Wave from "../wave/Wave";
@@ -18,28 +17,25 @@ export default class Storage extends React.Component {
         />
         <Wave />
         <Section
-          flipped={false}
-          img={{ src: "", alt: "" }}
+          img={""}
           text={
             "asdsdasdndsansafhfshosafhsfhhfohafohfiohfiohfiohwfqiohwfqihfqwihwfqipqwfhpiqwfpasofoasasfisajgngosndahitwhdilhwelolsdosdiosdfilafilabilabileahbiulbbfwbwrbiawbwadjdagnonadfknsdkfosdfbjdsbjsfbjlfsnjkdfnjodfbibegibibjbfjdbjo;gawbieboeb;gedndneklbjgewbgewo;wbwabbwkb;obelbjdfbjsdzfnjdsno;szdfnffnokfnoafnoa"
           }
         />
         <Section
-          flipped={true}
-          img={{ src: "", alt: "" }}
+          flipped
+          img={""}
           text={
             "asdsdasdndsansafhfshosafhsfhhfohafohfiohfiohfiohwfqiohwfqihfqwihwfqipqwfhpiqwfpasofoasasfisajgngosndahitwhdilhwelolsdosdiosdfilafilabilabileahbiulbbfwbwrbiawbwadjdagnonadfknsdkfosdfbjdsbjsfbjlfsnjkdfnjodfbibegibibjbfjdbjo;gawbieboeb;gedndneklbjgewbgewo;wbwabbwkb;obelbjdfbjsdzfnjdsno;szdfnffnokfnoafnoa"
           }
         />
         <Section
-          flipped={false}
-          img={{ src: "", alt: "" }}
+          img={""}
           text={
             "asdsdasdndsansafhfshosafhsfhhfohafohfiohfiohfiohwfqiohwfqihfqwihwfqipqwfhpiqwfpasofoasasfisajgngosndahitwhdilhwelolsdosdiosdfilafilabilabileahbiulbbfwbwrbiawbwadjdagnonadfknsdkfosdfbjdsbjsfbjlfsnjkdfnjodfbibegibibjbfjdbjo;gawbieboeb;gedndneklbjgewbgewo;wbwabbwkb;obelbjdfbjsdzfnjdsno;szdfnffnokfnoafnoa"
           }
         />
-        <Wave flipped={true} />
-        <Footer />
+        <Wave flipped />
       </div>
     );
   }

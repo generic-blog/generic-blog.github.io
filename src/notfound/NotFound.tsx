@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Section from "../sections/Section";
 import Wave from "../wave/Wave";
 import "./notfound.css";
 
@@ -18,6 +19,14 @@ export default class NotFound extends React.PureComponent {
           </div>
         </main>
         <Wave />
+        <Section
+          text={
+            "asdsdasdndsansafhfshosafhsfhhfohafohfiohfiohfiohwfqiohwfqihfqwihwfqipqwfhpiqwfpasofoasasfisajgngosndahitwhdilhwelolsdosdiosdfilafilabilabileahbiulbbfwbwrbiawbwadjdagnonadfknsdkfosdfbjdsbjsfbjlfsnjkdfnjodfbibegibibjbfjdbjo;gawbieboeb;gedndneklbjgewbgewo;wbwabbwkb;obelbjdfbjsdzfnjdsno;szdfnffnokfnoafnoa"
+          }
+          img={""}
+          flipped
+        />
+        <Wave flipped />
       </>
     );
   }

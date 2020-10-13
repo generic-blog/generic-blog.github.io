@@ -3,10 +3,7 @@ import "./section.css";
 
 interface Props {
   text?: string;
-  img: {
-    src: string;
-    alt: string;
-  };
+  img?: string;
   flipped?: boolean;
   className?: string;
 }
@@ -34,7 +31,6 @@ export default class Section extends React.Component<
     return () => observer.unobserve(this.domRef.current!);
   }
   render() {
-    const { text, img } = this.props;
     return (
       <section
         className={
@@ -46,10 +42,14 @@ export default class Section extends React.Component<
       >
         <main className="container">
           <div className="text-container">
-            <p className="text">{text}</p>
+            <p className="text">{this.props.text}</p>
           </div>
           <div className="image-container">
-            <img src={img.src} alt={img.alt} className="image" />
+            <img
+              src={this.props.img}
+              alt={"graphic not found :("}
+              className="image"
+            />
           </div>
         </main>
       </section>

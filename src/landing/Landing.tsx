@@ -24,7 +24,7 @@ export default class Landing extends React.PureComponent {
             </div>
           </main>
         </section>
-        <Wave flipped={false} />
+        <Wave />
       </>
     );
   }

@@ -1,38 +1,42 @@
 import React from "react";
-import "./App.css";
-import Footer from "./footer/Footer";
-import Landing from "./landing/Landing";
-import Section from "./sections/Section";
-import Wave from "./wave/Wave";
+import Intro from "../intro/Intro";
+import Section from "../sections/Section";
+import Wave from "../wave/Wave";
+import utilImage from "./cog.png";
 
-export default class Home extends React.Component {
+export default class Utility extends React.PureComponent {
   render() {
     return (
-      <div className="Home">
-        <Landing />
+      <div className="Utility">
+        <Intro
+          feature={"Utility"}
+          description={
+            "Make your server great for everyone with these extra commands."
+          }
+          img={utilImage}
+          spin
+        />
+        <Wave />
         <Section
-          flipped={true}
-          img={{ src: "", alt: "" }}
+          img={""}
           text={
             "asdsdasdndsansafhfshosafhsfhhfohafohfiohfiohfiohwfqiohwfqihfqwihwfqipqwfhpiqwfpasofoasasfisajgngosndahitwhdilhwelolsdosdiosdfilafilabilabileahbiulbbfwbwrbiawbwadjdagnonadfknsdkfosdfbjdsbjsfbjlfsnjkdfnjodfbibegibibjbfjdbjo;gawbieboeb;gedndneklbjgewbgewo;wbwabbwkb;obelbjdfbjsdzfnjdsno;szdfnffnokfnoafnoa"
           }
         />
         <Section
-          flipped={false}
-          img={{ src: "", alt: "" }}
+          flipped
+          img={""}
           text={
             "asdsdasdndsansafhfshosafhsfhhfohafohfiohfiohfiohwfqiohwfqihfqwihwfqipqwfhpiqwfpasofoasasfisajgngosndahitwhdilhwelolsdosdiosdfilafilabilabileahbiulbbfwbwrbiawbwadjdagnonadfknsdkfosdfbjdsbjsfbjlfsnjkdfnjodfbibegibibjbfjdbjo;gawbieboeb;gedndneklbjgewbgewo;wbwabbwkb;obelbjdfbjsdzfnjdsno;szdfnffnokfnoafnoa"
           }
         />
         <Section
-          flipped={true}
-          img={{ src: "", alt: "" }}
+          img={""}
           text={
             "asdsdasdndsansafhfshosafhsfhhfohafohfiohfiohfiohwfqiohwfqihfqwihwfqipqwfhpiqwfpasofoasasfisajgngosndahitwhdilhwelolsdosdiosdfilafilabilabileahbiulbbfwbwrbiawbwadjdagnonadfknsdkfosdfbjdsbjsfbjlfsnjkdfnjodfbibegibibjbfjdbjo;gawbieboeb;gedndneklbjgewbgewo;wbwabbwkb;obelbjdfbjsdzfnjdsno;szdfnffnokfnoafnoa"
           }
         />
-        <Wave flipped={true} />
-        <Footer />
+        <Wave flipped />
       </div>
     );
   }

@@ -6,6 +6,7 @@
 .intro-flex {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .intro-text {
@@ -49,6 +50,10 @@ img.intro-image {
   max-width: 80%;
 }
 
+.spin {
+  animation: 10s rotate linear infinite;
+}
+
 @media (min-width: 800px) {
   img.intro-image {
     max-width: 650px;
@@ -71,7 +76,7 @@ img.intro-image {
 
   div.intro-text {
     padding: 0 2rem 2rem;
-    margin-top: -10rem;
+    margin-top: -8rem;
     z-index: 10;
   }
 }
@@ -90,11 +95,13 @@ img.intro-image {
     margin-top: 0;
     display: flex;
     flex-direction: column;
+    max-width: 650px;
   }
 }
 
 @media (min-width: 1500px) {
   div.intro-text {
     padding: 4rem;
+    max-width: 850px;
   }
 }

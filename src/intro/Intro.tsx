@@ -5,6 +5,7 @@ interface Props {
   feature?: string;
   description?: string;
   img?: string;
+  spin?: boolean;
 }
 
 export default class Intro extends React.PureComponent<Props> {
@@ -21,7 +22,7 @@ export default class Intro extends React.PureComponent<Props> {
             <img
               src={this.props.img}
               alt="graphic not found :("
-              className="intro-image"
+              className={"intro-image" + (this.props.spin ? " spin" : "")}
             />
           </div>
         </main>

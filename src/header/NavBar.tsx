@@ -29,8 +29,8 @@ export default class NavBar extends React.Component {
               </Link>
             </div>
             <div className="navlink-container">
-              <Link to="/" className="navlink">
-                Sit
+              <Link to="/utility" className="navlink">
+                Utility
               </Link>
             </div>
             <div className="navlink-container">

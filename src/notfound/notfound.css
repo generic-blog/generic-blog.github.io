@@ -36,3 +36,9 @@ main.not-found {
     font-size: calc(var(--fs-h2) - 0.5rem);
   }
 }
+
+@media (min-width: 1200px) {
+  main.not-found {
+    min-height: 800px;
+  }
+}
