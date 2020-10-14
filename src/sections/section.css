@@ -43,6 +43,12 @@ div.image-container {
   min-width: 70%;
 }
 
+h3.text-title {
+  color: var(--clr-light-grey);
+  font-size: var(--fs-h4);
+  margin: 1rem 0;
+}
+
 p.text {
   color: var(--clr-text);
   line-height: 1.6;

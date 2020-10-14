@@ -48,6 +48,7 @@ div.intro-image-container {
 
 img.intro-image {
   max-width: 80%;
+  pointer-events: none;
 }
 
 .spin {
@@ -78,6 +79,10 @@ img.intro-image {
     padding: 0 2rem 2rem;
     margin-top: -8rem;
     z-index: 10;
+  }
+
+  div.intro-text.close {
+    margin-top: -6rem;
   }
 }
 

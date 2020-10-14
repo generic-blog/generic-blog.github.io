@@ -6,6 +6,7 @@ interface Props {
   description?: string;
   img?: string;
   spin?: boolean;
+  close?: boolean;
 }
 
 export default class Intro extends React.PureComponent<Props> {
@@ -13,7 +14,7 @@ export default class Intro extends React.PureComponent<Props> {
     return (
       <article className="intro">
         <main className="intro-flex">
-          <div className="intro-text">
+          <div className={"intro-text" + (this.props.close ? " close" : "")}>
             <h2 className="feature">{this.props.feature}</h2>
             <hr className="underline" />
             <p className="description">{this.props.description}</p>

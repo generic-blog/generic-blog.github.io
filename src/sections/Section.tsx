@@ -2,6 +2,7 @@ import React, { createRef } from "react";
 import "./section.css";
 
 interface Props {
+  title?: string;
   text?: string;
   img?: string;
   flipped?: boolean;
@@ -42,6 +43,7 @@ export default class Section extends React.Component<
       >
         <main className="container">
           <div className="text-container">
+            <h3 className="text-title">{this.props.title}</h3>
             <p className="text">{this.props.text}</p>
           </div>
           <div className="image-container">

@@ -1,0 +1,25 @@
+.table-row {
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid var(--clr-light-grey);
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.command {
+  color: var(--clr-blue);
+  font-size: var(--fs-h4);
+}
+
+.command-description {
+  color: var(--clr-light-grey);
+  font-size: var(--fs-body);
+}
+
+@media (min-width: 800px) {
+  .table-row {
+    display: grid;
+  }
+}
