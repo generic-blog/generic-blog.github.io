@@ -7,13 +7,27 @@ export default class Footer extends React.PureComponent {
     return (
       <footer className="footer-distributed">
         <div className="footer-left">
-          <h2>
-            The<span>Archive</span>
-          </h2>
+          <h2>The Archive</h2>
           <p className="footer-links">
-            <Link to="/">Home</Link>·<Link to="/storage">Storage</Link>·
-            <Link to="/moderation">Moderation</Link>·
-            <Link to="/utility">Utility</Link>·<Link to="/docs">Docs</Link>
+            <Link to="/" onClick={() => (window.location.href = "#")}>
+              Home
+            </Link>
+            ·
+            <Link to="/storage" onClick={() => (window.location.href = "#")}>
+              Storage
+            </Link>
+            ·
+            <Link to="/moderation" onClick={() => (window.location.href = "#")}>
+              Moderation
+            </Link>
+            ·
+            <Link to="/utility" onClick={() => (window.location.href = "#")}>
+              Utility
+            </Link>
+            ·
+            <Link to="/docs" onClick={() => (window.location.href = "#")}>
+              Docs
+            </Link>
           </p>
           <p className="footer-company-name">Copyright &copy; 2020 im-lonely</p>
         </div>

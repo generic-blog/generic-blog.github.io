@@ -28,6 +28,7 @@ h2.feature {
   line-height: 1.6;
   opacity: 0;
   animation: 1s drop-in ease forwards;
+  font-weight: 400;
 }
 
 p.description {
@@ -101,6 +102,10 @@ img.intro-image {
     display: flex;
     flex-direction: column;
     max-width: 650px;
+  }
+
+  div.intro-text.close {
+    margin-top: 0;
   }
 }
 

@@ -15,6 +15,7 @@ export default class Utility extends React.PureComponent {
           }
           img={utilImage}
           spin
+          close
         />
         <Wave />
         <Section

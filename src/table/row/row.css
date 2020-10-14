@@ -11,6 +11,7 @@
 .command {
   color: var(--clr-blue);
   font-size: var(--fs-h4);
+  font-weight: 300;
 }
 
 .command-description {

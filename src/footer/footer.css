@@ -29,15 +29,10 @@
   font-size: var(--fs-h3);
 }
 
-.footer-distributed h2 span {
-  color: var(--clr-blue);
-}
-
 .footer-distributed .footer-links {
   color: var(--clr-blue);
   margin: 20px 0 12px;
   padding: 0;
-  cursor: pointer;
 }
 
 .footer-distributed .footer-links * {
@@ -47,6 +42,7 @@
   color: inherit;
   padding: 0.2rem;
   transition: 0.2s color ease;
+  cursor: pointer;
 }
 
 .footer-distributed .footer-links *:hover {
