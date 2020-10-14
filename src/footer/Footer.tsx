@@ -13,7 +13,7 @@ export default class Footer extends React.PureComponent {
           <p className="footer-links">
             <Link to="/">Home</Link>·<Link to="/storage">Storage</Link>·
             <Link to="/moderation">Moderation</Link>·
-            <Link to="/utility">Utility</Link>·<Link to="/">Amet</Link>
+            <Link to="/utility">Utility</Link>·<Link to="/docs">Docs</Link>
           </p>
           <p className="footer-company-name">Copyright &copy; 2020 im-lonely</p>
         </div>

@@ -34,8 +34,8 @@ export default class NavBar extends React.Component {
               </Link>
             </div>
             <div className="navlink-container">
-              <Link to="/" className="navlink">
-                Amet
+              <Link to="/docs" className="navlink">
+                Docs
               </Link>
             </div>
           </div>
