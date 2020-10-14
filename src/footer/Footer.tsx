@@ -19,9 +19,7 @@ export default class Footer extends React.PureComponent {
         </div>
         <div className="footer-center" id="section2">
           <div>
-            <p>
-              <span>Manage your</span>server easily
-            </p>
+            <p>Manage your server easily</p>
           </div>
           <br />
           <div>

@@ -3,7 +3,7 @@ section.section {
   transform: translateY(32px);
   opacity: 0;
   visibility: hidden;
-  transition: 0.5s all ease-out;
+  transition: 0.5s opacity ease-out, 0.5s transform ease-out;
 }
 
 section.visible {
