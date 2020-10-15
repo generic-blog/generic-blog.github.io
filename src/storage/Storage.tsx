@@ -4,7 +4,7 @@ import Section from "../sections/Section";
 import Wave from "../wave/Wave";
 import databaseImage from "./database.png";
 
-export default class Storage extends React.Component {
+export default class Storage extends React.PureComponent {
   render() {
     return (
       <div className="Storage">

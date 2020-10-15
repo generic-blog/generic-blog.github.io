@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 
-export default class NavBar extends React.Component {
+export default class NavBar extends React.PureComponent {
   render() {
     return (
       <header className="header">

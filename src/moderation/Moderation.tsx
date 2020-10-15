@@ -4,7 +4,7 @@ import Section from "../sections/Section";
 import Wave from "../wave/Wave";
 import moderationImage from "./moderation.png";
 
-export default class Moderation extends React.Component {
+export default class Moderation extends React.PureComponent {
   render() {
     return (
       <div className="Moderation">

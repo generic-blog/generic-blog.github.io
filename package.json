@@ -2,14 +2,14 @@
   "name": "the-archive-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://im-lonely.github.io/the-archive-site",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
+    "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.6",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
@@ -26,6 +26,8 @@
   "scripts": {
     "watch": "tsc -w",
     "dev": "yarn start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -51,7 +53,9 @@
     "@types/express-session": "^1.17.0",
     "@types/passport": "^1.0.4",
     "@types/passport-discord": "^0.1.3",
+    "@types/react": "^16.9.52",
     "dotenv": "^8.2.0",
+    "gh-pages": "^3.1.0",
     "nodemon": "^2.0.4"
   }
 }
