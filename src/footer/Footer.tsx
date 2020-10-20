@@ -42,7 +42,11 @@ export default class Footer extends React.PureComponent {
           <br />
           <div>
             <p>
-              <a href="#invite" target="_blank">
+              <a
+                href="https://discord.com/oauth2/authorize?client_id=766033365727051777&scope=bot&permissions=2146958847"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 Invite
               </a>
             </p>

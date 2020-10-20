@@ -7,7 +7,7 @@
   /* border: var(--dev-border); */
 }
 
-:root {
+html {
   --ff-primary: "Open Sans", sans-serif;
   --ff-secondary: "Josefin Sans", sans-serif;
 
@@ -29,10 +29,21 @@
   --clr-dark-blue: #0099cc;
 
   --dev-border: 1px solid red;
+
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  background-color: var(--clr-black);
+
+  transition: 0.2s all ease;
+}
+
+.light {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
 }
 
 @media (min-width: 800px) {
-  :root {
+  html {
     --fs-h0: 6rem;
     --fs-h1: 4.5rem;
     --fs-h2: 3.25rem;
@@ -43,7 +54,7 @@
 }
 
 @media (min-width: 1200px) {
-  :root {
+  html {
     --fs-h0: 6.25rem;
     --fs-h1: 5.2rem;
     --fs-h2: 3.65rem;
@@ -54,7 +65,7 @@
 }
 
 @media (min-width: 1500px) {
-  :root {
+  html {
     --fs-h0: 7.5rem;
     --fs-h1: 5.5rem;
     --fs-h2: 3.8rem;
@@ -65,7 +76,7 @@
 }
 
 @media (min-width: 1750px) {
-  :root {
+  html {
     --fs-h0: 8.75rem;
     --fs-h1: 5.75rem;
     --fs-h2: 4rem;
@@ -76,7 +87,7 @@
 }
 
 @media (min-width: 2000px) {
-  :root {
+  html {
     --fs-h0: 10rem;
     --fs-h1: 6.1rem;
     --fs-h2: 4.1rem;
@@ -86,17 +97,12 @@
   }
 }
 
-html {
-  overflow-x: hidden;
-  overscroll-behavior: none;
-  background-color: var(--clr-black);
-}
-
 body {
   margin: 0;
   font-family: var(--ff-primary);
   font-weight: 300;
   color: var(--clr-text);
+  background-color: var(--clr-black);
 }
 
 a {
@@ -153,4 +159,39 @@ a {
   to {
     transform: rotate(359deg);
   }
+}
+
+.watermark {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  opacity: 0.5;
+  width: 100px;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  .watermark {
+    top: 0;
+    width: 75px;
+    margin: 1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .watermark {
+    width: 100px;
+  }
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
 }

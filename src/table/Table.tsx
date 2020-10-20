@@ -7,7 +7,7 @@ interface Props {
   rows?: Array<RowProps>;
 }
 
-export default class Table extends React.Component<Props> {
+export default class Table extends React.PureComponent<Props> {
   render() {
     return (
       <div className="table">
@@ -15,6 +15,7 @@ export default class Table extends React.Component<Props> {
         {this.props.rows?.map((row) => (
           <Row
             command={row.command}
+            usage={row.usage}
             description={row.description}
             key={Math.random()}
           />

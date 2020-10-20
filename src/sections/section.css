@@ -1,5 +1,5 @@
 section.section {
-  min-height: 500px;
+  min-height: 450px;
   transform: translateY(32px);
   opacity: 0;
   visibility: hidden;
@@ -14,7 +14,7 @@ section.visible {
 
 main.container {
   max-width: 80%;
-  min-height: 600px;
+  min-height: 450px;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -38,15 +38,34 @@ div.text-container {
 
 div.image-container {
   color: white;
-  min-height: 300px;
+  max-height: fit-content;
   max-width: 70%;
   min-width: 70%;
+  display: grid;
+  align-items: center;
+}
+
+div.justify {
+  align-items: unset !important;
+  justify-content: center !important;
+}
+
+div.justify * {
+  transform: scale(1.1);
+}
+
+img.image {
+  max-width: 350px;
+  border-radius: 8px;
+  -webkit-box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.5);
 }
 
 h3.text-title {
   color: var(--clr-light-grey);
   font-size: var(--fs-h4);
-  margin: 1rem 0;
+  margin: 0 0 1rem;
   font-weight: 400;
 }
 
@@ -58,20 +77,28 @@ p.text {
 }
 
 @media (min-width: 800px) {
+  section.section {
+    min-height: 500px;
+  }
+
   p.text {
     font-size: var(--fs-body);
   }
 
   main.container {
-    min-height: 700px;
+    min-height: 600px;
   }
 
   div.image-container {
-    min-height: 400px;
+    min-height: fit-content;
+  }
+
+  img.image {
+    max-width: 500px;
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1050px) {
   section {
     min-height: 500px;
   }
@@ -85,7 +112,19 @@ p.text {
   div.text-container {
     max-width: 47.5%;
     min-width: 47.5%;
-    height: 600px;
+    min-height: fit-content;
+  }
+
+  div.justify {
+    justify-content: right;
+  }
+
+  section.flipped div.justify {
+    justify-content: left !important;
+  }
+
+  div.justify * {
+    transform: scale(1.05);
   }
 
   section.flip main.container {
@@ -95,7 +134,7 @@ p.text {
 
 @media (min-width: 1200px) {
   section.section {
-    min-height: 700px;
+    min-height: 500px;
   }
 
   p.text {
@@ -104,14 +143,32 @@ p.text {
 
   main.container {
     max-width: 75%;
-    min-height: 600px;
+    min-height: 500px;
     justify-content: space-around;
+  }
+
+  img.image {
+    min-width: 90%;
   }
 
   div.image-container,
   div.text-container {
     max-width: 45%;
     min-width: 45%;
-    height: 600px;
+    height: 400px;
+  }
+
+  div.justify * {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 1500px) {
+  div.justify {
+    align-items: center !important;
+  }
+
+  div.justify * {
+    transform: scale(1.35);
   }
 }

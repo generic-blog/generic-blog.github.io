@@ -1,5 +1,5 @@
 main.not-found {
-  min-height: 700px;
+  min-height: 764px;
   background-color: var(--clr-dark);
   color: var(--clr-light);
   display: grid;
@@ -40,5 +40,17 @@ main.not-found {
 @media (min-width: 1200px) {
   main.not-found {
     min-height: 800px;
+  }
+}
+
+@media (min-width: 1500px) {
+  main.not-found {
+    min-height: 900px;
+  }
+}
+
+@media (min-width: 1800px) {
+  main.not-found {
+    min-height: 1000px;
   }
 }
