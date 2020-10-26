@@ -1,20 +1,5 @@
-# Star all of [PandaBoi](https://github.com/SatanPanda)'s stuff
+# generic<blog>()
 
-### A nice ~~MERN stack~~ pure React TypeScript site, ~~as promised~~ full of crap code.
+### [cursorsdottsx](https://www.github.com/cursorsdottsx)'s blog
 
-#### Made with:
-
-- TypeScript
-- React
-- NodeJS
-- Yarn
-
-and a whole lot of ☕
-
-##### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Resources
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+i make stuff, so i thought i'd share my stuff.
