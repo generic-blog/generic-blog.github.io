@@ -1,4 +1,4 @@
-# generic<blog>()
+# a generic blog
 
 ### [cursorsdottsx](https://www.github.com/cursorsdottsx)'s blog
 
