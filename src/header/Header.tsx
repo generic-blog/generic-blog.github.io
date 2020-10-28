@@ -25,6 +25,10 @@ const Header: React.FC = () => {
     "[object Object]",
     "deno and nodejs",
     "sublime sucks",
+    "owo whats this",
+    "i need coffee",
+    "object oriented",
+    "pure functions",
   ];
 
   const randomText = text[Math.floor(Math.random() * text.length)];

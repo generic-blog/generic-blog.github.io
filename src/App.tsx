@@ -4,6 +4,7 @@ import Header from "./header/Header";
 
 import "./App.css";
 import Footer from "./footer/Footer";
+import Home from "./home/Home";
 
 export default class App extends React.PureComponent {
   render() {
@@ -13,10 +14,11 @@ export default class App extends React.PureComponent {
           <Header />
           <div className="content">
             <Switch>
-              <Route />
+              <Route path="/" exact component={Home} />
+              <Route path="/blog/" component={Home} />
             </Switch>
           </div>
-          <Footer latestPostLink="/" latestPostTitle="Lorem ipsum" />
+          <Footer latestLink="/" />
         </Router>
       </div>
     );

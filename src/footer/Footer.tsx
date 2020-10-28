@@ -4,12 +4,14 @@ import "./footer.css";
 import "../syntax/syntax.css";
 import { Link } from "react-router-dom";
 
+import { DiReact } from "react-icons/di";
+import { IconContext } from "react-icons";
+
 interface Props {
-  latestPostLink: string;
-  latestPostTitle: string;
+  latestLink: string;
 }
 
-const Footer: React.FC<Props> = ({ latestPostLink, latestPostTitle }) => {
+const Footer: React.FC<Props> = ({ latestLink }) => {
   return (
     <footer className="footer">
       <div className="left">
@@ -22,11 +24,19 @@ const Footer: React.FC<Props> = ({ latestPostLink, latestPostTitle }) => {
         </div>
       </div>
       <div className="right">
+        <div className="middle">
+          <span>Made with</span>
+          <IconContext.Provider
+            value={{
+              color: "#61dafb",
+              size: "4rem",
+            }}
+          >
+            <DiReact />
+          </IconContext.Provider>
+        </div>
         <div className="latest">
-          latest post:{" "}
-          <span>
-            <Link to={latestPostLink}>{latestPostTitle}</Link>
-          </span>
+          <Link to={latestLink}>latest post</Link>
         </div>
       </div>
     </footer>
