@@ -16,7 +16,7 @@
 
 .mono {
   font-family: var(--ff-mono);
-  font-size: var(--fs-body);
+  font-size: calc(var(--fs-body) - 0.25rem);
   background-color: #222;
   padding: 1rem;
   border-radius: 8px;
@@ -29,6 +29,7 @@
 
 .middle span {
   user-select: none;
+  display: none;
 }
 
 .right {
@@ -44,6 +45,16 @@
   color: lightskyblue;
   font-size: var(--fs-h4);
   padding: 1rem 2rem;
+}
+
+@media (min-width: 600px) {
+  .mono {
+    font-size: var(--fs-body);
+  }
+
+  .middle span {
+    display: initial;
+  }
 }
 
 @media (min-width: 800px) {

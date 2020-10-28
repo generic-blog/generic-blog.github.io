@@ -5,6 +5,8 @@ import Header from "./header/Header";
 import "./App.css";
 import Footer from "./footer/Footer";
 import Home from "./home/Home";
+import NotFound from "./notfound/NotFound";
+const Blog = React.lazy(() => import("./blog/Blog"));
 
 export default class App extends React.PureComponent {
   render() {
@@ -13,10 +15,13 @@ export default class App extends React.PureComponent {
         <Router>
           <Header />
           <div className="content">
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/blog/" component={Home} />
-            </Switch>
+            <React.Suspense fallback={""}>
+              <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/posts/:postTitleURLParam" component={Blog} />
+                <Route path="/" component={NotFound} />
+              </Switch>
+            </React.Suspense>
           </div>
           <Footer latestLink="/" />
         </Router>
