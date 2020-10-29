@@ -3,12 +3,18 @@ import { useParams } from "react-router-dom";
 import "./blog.css";
 import "./post.css";
 
-interface Props {
+import * as orm from "sequelize";
+
+interface Params {
   postTitleURLParam: string;
 }
 
+interface Props {
+  model: orm.Model<any, any, any>;
+}
+
 const Blog: React.FC<Props> = () => {
-  const { postTitleURLParam } = useParams<Props>();
+  const { postTitleURLParam } = useParams<Params>();
 
   return (
     <article className="blog">
