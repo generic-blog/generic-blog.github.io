@@ -58,7 +58,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <Header toggleTheme={toggleTheme} />
         <div className="content">
           <Suspense fallback={""}>
