@@ -1,11 +1,55 @@
-.keyword {
+.dark,
+.light {
+  font-family: var(--ff-mono);
+  font-size: calc(var(--fs-body) - 0.25rem);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.dark {
+  background-color: #222;
+  color: var(--clr-light);
+}
+
+.light {
+  background-color: #eee;
+  color: var(--clr-dark);
+}
+
+.dark .keyword {
   color: #8aa5ff;
 }
 
-.class {
+.dark .class {
   color: #5f87f6;
 }
 
-.var {
+.dark .var {
   color: #6fffe7;
+}
+
+.dark .string {
+  color: #00ff9d;
+}
+
+.light .keyword {
+  color: #6542ff;
+}
+
+.light .class {
+  color: #1a50e6;
+}
+
+.light .var {
+  color: #0077ff;
+}
+
+.light .string {
+  color: #8c00ff;
+}
+
+@media (min-width: 600px) {
+  .large {
+    font-size: var(--fs-body);
+  }
 }

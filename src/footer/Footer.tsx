@@ -15,7 +15,7 @@ const Footer: React.FC<Props> = ({ latestLink }) => {
   return (
     <footer className="footer">
       <div className="left">
-        <div className="mono">
+        <div className="code large dark">
           <span className="class">Generic</span>{" "}
           <span className="var">blog</span> ={" "}
           <span className="keyword">new</span>{" "}
@@ -28,7 +28,7 @@ const Footer: React.FC<Props> = ({ latestLink }) => {
           <span>Made with</span>
           <IconContext.Provider
             value={{
-              color: "#61dafb",
+              color: "#61dbfb",
               size: "4rem",
             }}
           >
