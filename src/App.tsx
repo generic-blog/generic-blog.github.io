@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { retrieve, dynamicSort, postCollection } from "./router";
@@ -8,8 +8,8 @@ import "./App.css";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import Home from "./home/Home";
-import NotFound from "./notfound/NotFound";
 import { Post } from "./Post";
+const NotFound = React.lazy(() => import("./notfound/NotFound"));
 const Blog = React.lazy(() => import("./blog/Blog"));
 
 const App = () => {
@@ -39,7 +39,7 @@ const App = () => {
       <Router>
         <Header />
         <div className="content">
-          <React.Suspense fallback={""}>
+          <Suspense fallback={""}>
             <Switch>
               <Route path="/" exact component={Home} />
               <Route
@@ -48,7 +48,7 @@ const App = () => {
               />
               <Route path="/" component={NotFound} />
             </Switch>
-          </React.Suspense>
+          </Suspense>
         </div>
         <Footer latestLink={post.data.link} />
       </Router>

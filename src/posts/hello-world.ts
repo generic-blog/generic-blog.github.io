@@ -8,7 +8,8 @@ export const data = {
       content:
         "hello people in this short tutorial and my first ever post i will show you how to log hello world into the console",
     },
-    { type: "code", content: 'console.log("hello world")' },
+    { type: "code", content: 'console.log("hello world");' },
+    { type: "code", content: 'console.log(\\"hel`l\\`o w` \'orld");' },
   ],
   createdAt: "Oct 29, 2020",
 };

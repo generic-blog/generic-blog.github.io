@@ -37,15 +37,23 @@
 }
 
 .light .class {
-  color: #1a50e6;
+  color: #0044ff;
 }
 
 .light .var {
   color: #0077ff;
 }
 
+.light .property {
+  color: #521dff;
+}
+
 .light .string {
   color: #8c00ff;
+}
+
+.normal {
+  color: inherit !important;
 }
 
 @media (min-width: 600px) {

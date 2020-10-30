@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://generic-blog.github.io/",
   "dependencies": {
-    "@types/node": "^12.0.0",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.6",
     "react": "^16.13.1",
