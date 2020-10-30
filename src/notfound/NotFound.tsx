@@ -10,7 +10,7 @@ const NotFound: React.FC = () => {
         <p>
           Nothing much to see here.{" "}
           <Link
-            to={"/"}
+            to={`${process.env.PUBLIC_URL}/`}
             onClick={() => window.history.back()}
             className="notfound-back"
           >

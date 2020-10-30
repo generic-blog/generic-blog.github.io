@@ -11,10 +11,4 @@ export const data = {
     { type: "code", content: 'console.log("hello world");' },
   ],
   createdAt: "Oct 29, 2020",
-  suggestions: [
-    {
-      title: "lorem ipsum",
-      link: "hello-world",
-    },
-  ],
 };

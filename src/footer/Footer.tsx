@@ -36,7 +36,9 @@ const Footer: React.FC<Props> = ({ latestLink }) => {
           </IconContext.Provider>
         </div>
         <div className="latest">
-          <Link to={`/posts/${latestLink}`}>latest post</Link>
+          <Link to={`${process.env.PUBLIC_URL}/posts/${latestLink}`}>
+            latest post
+          </Link>
         </div>
       </div>
     </footer>

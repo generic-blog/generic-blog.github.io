@@ -94,7 +94,9 @@ const Blog: React.FC<Props> = ({ retrieve }) => {
         <ul className="post-suggestions">
           {post.data.suggestions?.map((suggestion) => (
             <li className="post-suggestion">
-              <Link to={`/posts/${suggestion.link}`}>{suggestion.title}</Link>
+              <Link to={`${process.env.PUBLIC_URL}/posts/${suggestion.link}`}>
+                {suggestion.title}
+              </Link>
             </li>
           ))}
         </ul>

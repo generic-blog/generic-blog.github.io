@@ -11,7 +11,7 @@ interface Props {
 
 const Note: React.FC<Props> = ({ link, text, title }) => {
   return (
-    <Link to={`/posts/${link}`}>
+    <Link to={`${process.env.PUBLIC_URL}/posts/${link}`}>
       <div className="note">
         <h3 className="note-title">{title}</h3>
         <hr />

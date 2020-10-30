@@ -53,7 +53,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
     <header className="header">
       <div className="logo-container">
         <h3 className="logo">
-          <Link to="/">generic&lt;blog&gt;()</Link>
+          <Link to={`${process.env.PUBLIC_URL}/`}>generic&lt;blog&gt;()</Link>
         </h3>
       </div>
       <div className="header-text">

@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 import { retrieve, postCollection } from "./router";
 
@@ -58,17 +58,21 @@ const App = () => {
 
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Header toggleTheme={toggleTheme} />
         <div className="content">
           <Suspense fallback={""}>
             <Switch>
-              <Route path="/" exact render={() => <Home posts={posts} />} />
               <Route
-                path="/posts/:postTitleURLParam"
+                path={`${process.env.PUBLIC_URL}/`}
+                exact
+                render={() => <Home posts={posts} />}
+              />
+              <Route
+                path={`${process.env.PUBLIC_URL}/posts/:postTitleURLParam`}
                 render={(props) => <Blog retrieve={retrieve} {...props} />}
               />
-              <Route path="/" component={NotFound} />
+              <Route path={`${process.env.PUBLIC_URL}/`} component={NotFound} />
             </Switch>
           </Suspense>
         </div>
