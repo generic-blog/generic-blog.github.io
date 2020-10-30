@@ -1,0 +1,44 @@
+.home {
+  padding-top: 135px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .home {
+    padding-top: 155px;
+  }
+}
+
+@media (min-width: 800px) {
+  .home {
+    padding-top: 115px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .home {
+    padding-top: 125px;
+    max-width: 92.5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home {
+    padding-top: 125px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .home {
+    padding-top: 130px;
+    max-width: 86%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .home {
+    padding-top: 135px;
+    max-width: 80%;
+  }
+}

@@ -17,10 +17,12 @@
 
 .post-timestamp {
   color: #888;
+  transition: 0.2s color ease;
 }
 
 .post-author {
   color: #5f87f6;
+  transition: 0.2s color ease;
 }
 
 .post-image-container {
@@ -62,6 +64,7 @@
 
 .post-suggestion::marker {
   color: #eee;
+  transition: 0.2s color ease;
 }
 
 .post-suggestion:hover {

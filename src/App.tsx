@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { retrieve, dynamicSort, postCollection } from "./router";
+import { retrieve, postCollection } from "./router";
 
 import "./App.css";
 
@@ -24,12 +24,16 @@ const App = () => {
     },
   });
 
+  const [posts, setPosts] = useState<Post[]>([]);
+
   useEffect(() => {
     (async function () {
       let mounted = true;
 
-      const sortedPosts = postCollection.sort(dynamicSort("createdAt", true));
-      if (mounted) setPost(await sortedPosts[0]);
+      if (mounted) {
+        setPost(await postCollection[0]);
+        setPosts(await Promise.all(postCollection));
+      }
 
       return () => (mounted = false);
     })();
@@ -59,7 +63,7 @@ const App = () => {
         <div className="content">
           <Suspense fallback={""}>
             <Switch>
-              <Route path="/" exact component={Home} />
+              <Route path="/" exact render={() => <Home posts={posts} />} />
               <Route
                 path="/posts/:postTitleURLParam"
                 render={(props) => <Blog retrieve={retrieve} {...props} />}

@@ -41,6 +41,8 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
     "program.exe",
     "lolcode",
     "debugging",
+    "git push",
+    "github octocat",
   ];
 
   const randomText = useRef<string>(

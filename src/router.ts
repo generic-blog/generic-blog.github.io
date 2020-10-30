@@ -11,13 +11,6 @@ export const retrieve = async (id: string) => {
   }
 };
 
-export const dynamicSort = (property: string, reversed?: boolean) => (
-  a: any,
-  b: any
-) =>
-  (a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0) *
-  (reversed ? -1 : 1);
-
 const postIds: string[] = ["hello-world"];
 
 export const postCollection: Promise<Post>[] = postIds.map(

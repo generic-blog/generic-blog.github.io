@@ -4,6 +4,7 @@
   font-size: calc(var(--fs-body) - 0.25rem);
   padding: 1rem;
   border-radius: 8px;
+  transition: 0.2s color ease, 0.2s background-color ease;
 }
 
 .dark {
@@ -14,6 +15,11 @@
 .light {
   background-color: #eee;
   color: var(--clr-dark);
+}
+
+.dark span,
+.light span {
+  transition: 0.2s color ease;
 }
 
 .dark .keyword {
