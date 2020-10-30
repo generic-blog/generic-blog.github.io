@@ -20,6 +20,7 @@ const Home: React.FC<Props> = ({ posts }) => {
             link={link}
             text={content.find((part) => part.type === "text")?.content!}
             title={title}
+            key={Math.random()}
           />
         ))}
       </div>
