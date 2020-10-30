@@ -3,6 +3,11 @@ export type Content = {
   content: string;
 };
 
+export type Suggestion = {
+  title: string;
+  link: string;
+};
+
 export type Post = {
   data: {
     link: string;
@@ -10,5 +15,6 @@ export type Post = {
     author: string;
     content: Content[];
     createdAt: string;
+    suggestions?: Suggestion[];
   };
 };

@@ -17,12 +17,12 @@ const Code: React.FC<Props> = ({ code }) => {
     return val || "";
   };
 
-  //   const usingTrue = (bools: MutableRefObject<boolean>[], val?: string) => {
-  //     bools.forEach((bool: MutableRefObject<boolean>) => {
-  //       bool.current = true;
-  //     });
-  //     return val || "";
-  //   };
+  const useTrue = (bools: MutableRefObject<boolean>[], val?: string) => {
+    bools.forEach((bool: MutableRefObject<boolean>) => {
+      bool.current = true;
+    });
+    return val || "";
+  };
 
   const useFlip = (bools: MutableRefObject<boolean>[], val?: string) => {
     bools.forEach((bool: MutableRefObject<boolean>) => {
@@ -32,15 +32,15 @@ const Code: React.FC<Props> = ({ code }) => {
   };
 
   const useHighlight = (code: string) => {
-    let isString = useRef(false);
-    let nextString = useRef(false);
-    let currentString = useRef("");
-    let isEscaped = useRef(false);
-    let isProperty = useRef(false);
-    let isObject = useRef(false);
-    let escapeHighlight = useRef(false);
-    let isClass = useRef(false);
-    let isKeyword = useRef("");
+    let isString = useRef<boolean>(false);
+    let nextString = useRef<boolean>(false);
+    let currentString = useRef<string>("");
+    let isEscaped = useRef<boolean>(false);
+    let isProperty = useRef<boolean>(false);
+    let isObject = useRef<boolean>(false);
+    let escapeHighlight = useRef<boolean>(false);
+    let isClass = useRef<boolean>(false);
+    let isKeyword = useRef<string>("");
 
     const keywords = [
       "break",
@@ -100,7 +100,8 @@ const Code: React.FC<Props> = ({ code }) => {
         isProperty.current = !isProperty.current;
       else isObject.current = true;
 
-      if (piece.toUpperCase() === piece) isClass.current = true;
+      if (piece.toUpperCase() === piece && /\w/.test(piece))
+        isClass.current = true;
 
       if (/[.,:;()[\]{}<>\-+*/=|&~!@#$%^&?]/.test(piece)) {
         escapeHighlight.current = true;
@@ -115,7 +116,7 @@ const Code: React.FC<Props> = ({ code }) => {
         : isEscaped.current
         ? useFlip([isEscaped, isString], "string")
         : escapeHighlight.current
-        ? "normal"
+        ? useTrue([escapeHighlight], "normal")
         : nextString.current
         ? useFalse([nextString], "string")
         : isClass.current
@@ -123,7 +124,7 @@ const Code: React.FC<Props> = ({ code }) => {
         : keywords.includes(isKeyword.current)
         ? "keyword"
         : isObject.current
-        ? "var"
+        ? useTrue([isObject], "var")
         : !isObject.current && isProperty
         ? "property"
         : "normal";

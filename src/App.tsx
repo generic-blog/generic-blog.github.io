@@ -20,6 +20,7 @@ const App = () => {
       content: [],
       createdAt: "",
       link: "",
+      suggestions: [],
     },
   });
 
@@ -32,12 +33,29 @@ const App = () => {
 
       return () => (mounted = false);
     })();
+
+    if (typeof Storage !== "undefined") {
+      if (localStorage.getItem("generic-blog-theme") === "dark") toggleTheme();
+      else if (localStorage.getItem("generic-blog-theme") === "light")
+        console.log("ew light theme");
+      else localStorage.setItem("generic-blog-theme", "light");
+    } else console.log("Theme is not saved!");
   }, []);
+
+  const toggleTheme = () => {
+    document.getElementsByTagName("html")[0].classList.toggle("dark-mode");
+    localStorage.setItem(
+      "generic-blog-theme",
+      document.getElementsByTagName("html")[0].classList.contains("dark-mode")
+        ? "dark"
+        : "light"
+    );
+  };
 
   return (
     <div className="App">
       <Router>
-        <Header />
+        <Header toggleTheme={toggleTheme} />
         <div className="content">
           <Suspense fallback={""}>
             <Switch>

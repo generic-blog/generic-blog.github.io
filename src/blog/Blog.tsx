@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Redirect, useParams } from "react-router-dom";
+import { Link, Redirect, useParams } from "react-router-dom";
 
 import { Post } from "../Post";
 
@@ -27,6 +27,7 @@ const Blog: React.FC<Props> = ({ retrieve }) => {
       createdAt: new Date().toDateString(),
       title: "",
       link: "",
+      suggestions: [],
     },
   });
 
@@ -58,11 +59,45 @@ const Blog: React.FC<Props> = ({ retrieve }) => {
               return <Text text={content.content} key={Math.random()} />;
             case "code":
               return <Code code={content.content} key={Math.random()} />;
+            case "image":
+              return (
+                <div className="post-image-container">
+                  <a
+                    href={content.content}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={content.content}
+                      alt=""
+                      key={Math.random()}
+                      className="post-image"
+                    />
+                  </a>
+                </div>
+              );
             default:
               console.log(`Unsupported content type: ${content.type}`);
               return <div key={Math.random()}></div>;
           }
         })}
+      </div>
+      <div className="post-suggestions-container">
+        {post.data.suggestions ? (
+          <>
+            <h3 className="post-suggestions-title">suggestions</h3>
+            <hr />
+          </>
+        ) : (
+          ""
+        )}
+        <ul className="post-suggestions">
+          {post.data.suggestions?.map((suggestion) => (
+            <li className="post-suggestion">
+              <Link to={`/posts/${suggestion.link}`}>{suggestion.title}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </article>
   );

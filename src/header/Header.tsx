@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
 
-const Header: React.FC = () => {
+interface Props {
+  toggleTheme: Function;
+}
+
+const Header: React.FC<Props> = ({ toggleTheme }) => {
   const text = [
     "i make stuff",
     "hello world",
@@ -29,9 +33,19 @@ const Header: React.FC = () => {
     "i need coffee",
     "object oriented",
     "pure functions",
+    "ew light theme",
+    "i use vscode btw",
+    "vim",
+    "npm",
+    "yarn",
+    "program.exe",
+    "lolcode",
+    "debugging",
   ];
 
-  const randomText = text[Math.floor(Math.random() * text.length)];
+  const randomText = useRef<string>(
+    text[Math.floor(Math.random() * text.length)]
+  );
 
   return (
     <header className="header">
@@ -41,7 +55,7 @@ const Header: React.FC = () => {
         </h3>
       </div>
       <div className="header-text">
-        <p>{randomText}</p>
+        <p onClick={() => toggleTheme()}>{randomText.current}</p>
       </div>
     </header>
   );

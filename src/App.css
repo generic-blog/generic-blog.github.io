@@ -18,7 +18,7 @@ html {
   --fs-body: 1.35rem;
 
   --clr-black: #1e1e1e;
-  --clr-dark: #1e2125;
+  --clr-dark: #212121;
   --clr-light: #f8f8f8;
   --clr-light-grey: #cdcdcd;
 
@@ -98,10 +98,6 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--ff-primary);
-  font-weight: 300;
-  font-size: var(--fs-body);
-  color: var(--clr-dark);
 }
 
 h1 {
@@ -127,4 +123,57 @@ a {
 
 .content {
   min-height: 100vh;
+}
+
+.App {
+  font-family: var(--ff-primary);
+  font-weight: 300;
+  font-size: var(--fs-body);
+  color: var(--clr-dark);
+  background-color: #fefefe;
+}
+
+/* DARK MODE */
+
+.dark-mode .App {
+  color: var(--clr-light);
+  background-color: var(--clr-dark);
+}
+
+.dark-mode .header {
+  background-color: var(--clr-dark);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .post-timestamp {
+  color: #ccc;
+}
+
+.dark-mode .post-author {
+  color: #6fffe7;
+}
+
+.dark-mode .light {
+  background-color: rgb(42, 42, 42);
+  color: var(--clr-light);
+}
+
+.dark-mode .light .keyword {
+  color: #8aa5ff;
+}
+
+.dark-mode .light .class {
+  color: #5f87f6;
+}
+
+.dark-mode .light .var {
+  color: #6fffe7;
+}
+
+.dark-mode .light .property {
+  color: #84a9ff;
+}
+
+.dark-mode .light .string {
+  color: #00ff9d;
 }

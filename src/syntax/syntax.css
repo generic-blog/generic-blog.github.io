@@ -28,6 +28,10 @@
   color: #6fffe7;
 }
 
+.dark .property {
+  color: #3359ff;
+}
+
 .dark .string {
   color: #00ff9d;
 }

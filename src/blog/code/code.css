@@ -1,17 +1,16 @@
 .post-code {
   max-width: 90%;
-  margin: 0 auto;
-  padding: 1.5rem 0;
+  margin: 1.5rem auto;
 }
 
 @media (min-width: 800px) {
   .post-code {
-    padding: 1.75rem 0;
+    margin: 1.75rem auto;
   }
 }
 
 @media (min-width: 1000px) {
   .post-code {
-    padding: 2rem 0;
+    margin: 2rem auto;
   }
 }
