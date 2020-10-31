@@ -1,2 +1,0 @@
-(this["webpackJsonpgeneric-blog.github.io"]=this["webpackJsonpgeneric-blog.github.io"]||[]).push([[7],{43:function(o,t,e){"use strict";e.r(t),e.d(t,"data",(function(){return l}));var l={link:"hello-world-js",title:"Hello world!",author:"[Cursors]",content:[{type:"text",content:"hello people in this short tutorial and my first ever post i will show you how to log hello world into the javascript console"},{type:"code",content:'console.log("hello world");',lang:"js"}],createdAt:"Oct 29, 2020"}}}]);
-//# sourceMappingURL=7.0b9d2b9a.chunk.js.map
