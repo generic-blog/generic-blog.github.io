@@ -38,21 +38,30 @@ const App = () => {
       return () => (mounted = false);
     })();
 
+    const style = document.createElement("style");
+    style.innerText = "*,*::before,*::after{transition:none !important;}";
+    document.head.appendChild(style);
+
     if (typeof Storage !== "undefined") {
       if (localStorage.getItem("generic-blog-theme") === "dark") toggleTheme();
       else if (localStorage.getItem("generic-blog-theme") === "light")
         console.log("ew light theme");
       else localStorage.setItem("generic-blog-theme", "light");
     } else console.log("Theme is not saved!");
+
+    setTimeout(() => {
+      document.head.removeChild(style);
+    }, 200);
   }, []);
 
   const toggleTheme = () => {
-    document.getElementsByTagName("html")[0].classList.toggle("dark-mode");
+    const html = document.getElementsByTagName("html")[0];
+
+    html.classList.toggle("dark-mode");
+
     localStorage.setItem(
       "generic-blog-theme",
-      document.getElementsByTagName("html")[0].classList.contains("dark-mode")
-        ? "dark"
-        : "light"
+      html.classList.contains("dark-mode") ? "dark" : "light"
     );
   };
 
