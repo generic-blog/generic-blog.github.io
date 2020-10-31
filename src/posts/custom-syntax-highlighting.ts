@@ -37,7 +37,7 @@ export const data = {
     {
       type: "text",
       content:
-        "Not bad, I took classes, ids and pseudo classes and elements as well. It was certainly interesting to program this. JavaScript syntax highlighting would prove to be the most challenging.",
+        "Not bad, I took classes, ids and pseudo classes and elements into account as well. It was certainly interesting to program this. JavaScript syntax highlighting would prove to be the most challenging.",
     },
     {
       type: "code",
