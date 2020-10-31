@@ -1,6 +1,6 @@
 export const data = {
-  link: "syntax-highlighting-demo",
-  title: "Syntax highlighting",
+  link: "custom-syntax-highlighting",
+  title: "Custom syntax highlighting",
   author: "[Cursors]",
   content: [
     {
@@ -33,6 +33,26 @@ export const data = {
     font-size: 4rem;
 }`,
       lang: "css",
+    },
+    {
+      type: "text",
+      content:
+        "Not bad, I took classes, ids and pseudo classes and elements as well. It was certainly interesting to program this. JavaScript syntax highlighting would prove to be the most challenging.",
+    },
+    {
+      type: "code",
+      content: `console.log("hello world");
+/* comment */`,
+      lang: "js",
+    },
+    {
+      type: "text",
+      content:
+        "I had a lot of fun making these syntax highlighters. At times it could be frustrating, but when you get the logic right and everything just works, it's fantastic, but hey, that's programming.",
+    },
+    {
+      type: "text",
+      content: "Bye, until next time!",
     },
   ],
   createdAt: "Oct 30, 2020",

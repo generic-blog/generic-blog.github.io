@@ -281,7 +281,10 @@ export const useHighlightCSS = (code: string) => {
       isPseudo.current = true;
     }
 
-    if (piece === " ") isPseudo.current = false;
+    if (piece === " ") {
+      isPseudo.current = false;
+      isClassOrId.current = false;
+    }
 
     const className = isString.current
       ? "string"

@@ -11,12 +11,7 @@ export const retrieve = async (id: string) => {
   }
 };
 
-const postIds: string[] = [
-  "syntax-highlighting-demo",
-  "hello-world-css",
-  "hello-world-html",
-  "hello-world-js",
-];
+const postIds: string[] = ["custom-syntax-highlighting"];
 
 export const postCollection: Promise<Post>[] = postIds.map(
   async (id: string) => await import(`./posts/${id}.ts`)
