@@ -12,6 +12,7 @@ export const retrieve = async (id: string) => {
 };
 
 const postIds: string[] = [
+  "syntax-highlighting-demo",
   "hello-world-css",
   "hello-world-html",
   "hello-world-js",

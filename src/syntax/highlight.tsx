@@ -252,7 +252,7 @@ export const useHighlightCSS = (code: string) => {
       currentString.current = piece;
     }
 
-    if (/[,;()[\]{}\-+*=|~!@$%^?]/.test(piece)) {
+    if (/[,:;()[\]{}+*=|~!@$%^?]/.test(piece)) {
       escapeHighlight.current = true;
     }
 
@@ -287,12 +287,12 @@ export const useHighlightCSS = (code: string) => {
       ? "string"
       : isEscaped.current
       ? useFlip([isEscaped, isString], "string")
+      : isColon.current
+      ? "var"
       : escapeHighlight.current
       ? useFalse([escapeHighlight], "normal")
       : nextString.current
       ? useFalse([nextString], "string")
-      : isColon.current
-      ? "var"
       : isClassOrId.current
       ? "class"
       : isPseudo.current

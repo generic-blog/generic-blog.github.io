@@ -13,7 +13,7 @@
 
 html {
   --ff-primary: "Quicksand", sans-serif;
-  --ff-mono: "Fira Code", sans-serif;
+  --ff-mono: "Fira Code", monospace;
 
   --fs-h1: 3rem;
   --fs-h2: 2.4rem;

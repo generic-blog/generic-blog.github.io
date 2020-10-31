@@ -1,4 +1,12 @@
 .post-text {
-  text-indent: 2.5rem;
   line-height: 1.4;
+  margin: 1rem 0;
+}
+
+.post-text:first-child {
+  margin: 0 0 1rem;
+}
+
+.post-text:last-child {
+  margin: 1rem 0 0;
 }
