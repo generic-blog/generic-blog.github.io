@@ -24,4 +24,4 @@ yarn-error.log*
 
 config.json
 
-posts/*
+/posts/*

@@ -203,6 +203,10 @@ a {
   color: #00ff9d;
 }
 
+.dark-mode .light .comment {
+  color: #aaaaaa;
+}
+
 .dark-mode .note {
   border: 1px solid rgba(200, 200, 200, 0.75);
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);

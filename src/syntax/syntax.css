@@ -42,6 +42,10 @@
   color: #00ff9d;
 }
 
+.dark .comment {
+  color: #cccccc;
+}
+
 .light .keyword {
   color: #7340ff;
 }
@@ -60,6 +64,10 @@
 
 .light .string {
   color: #8c00ff;
+}
+
+.light .comment {
+  color: #444444;
 }
 
 .normal {

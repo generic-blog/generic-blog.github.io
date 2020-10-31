@@ -33,6 +33,8 @@ export const useHighlightJS = (code: string) => {
   const escapeHighlight = useRef<boolean>(false);
   const isClass = useRef<boolean>(false);
   const isKeyword = useRef<string>("");
+  const isComment = useRef<boolean>(false);
+  const comment = useRef<string>("");
 
   const keywords = [
     "break",
@@ -103,7 +105,21 @@ export const useHighlightJS = (code: string) => {
     if (!/[a-zA-Z]/.test(piece)) isKeyword.current += piece;
     else isKeyword.current = "";
 
-    const className = isString.current
+    comment.current += piece;
+
+    if (comment.current.includes("/*") && !isComment.current) {
+      isComment.current = true;
+      comment.current = "";
+    }
+
+    if (comment.current.includes("*/") && isComment.current) {
+      isComment.current = true;
+      comment.current = "";
+    }
+
+    const className = isComment.current
+      ? "comment"
+      : isString.current
       ? "string"
       : isEscaped.current
       ? useFlip([isEscaped, isString], "string")
@@ -140,6 +156,8 @@ export const useHighlightHTML = (code: string) => {
   const isEscaped = useRef<boolean>(false);
   const isCode = useRef<boolean>(false);
   const nextCode = useRef<boolean>(false);
+  const isComment = useRef<boolean>(false);
+  const comment = useRef<string>("");
 
   return code.split("").map((piece: string, i) => {
     if (piece === "\\" && isString.current) isEscaped.current = true;
@@ -188,7 +206,21 @@ export const useHighlightHTML = (code: string) => {
 
     if (!/[&#a-zA-Z0-9]/.test(piece) && isCode.current) isCode.current = false;
 
-    const className = isString.current
+    comment.current += piece;
+
+    if (comment.current.includes("<!--") && !isComment.current) {
+      isComment.current = true;
+      comment.current = "";
+    }
+
+    if (comment.current.includes("-->") && isComment.current) {
+      isComment.current = true;
+      comment.current = "";
+    }
+
+    const className = isComment.current
+      ? "comment"
+      : isString.current
       ? "string"
       : isEscaped.current
       ? useFlip([isEscaped, isString], "string")
@@ -230,6 +262,8 @@ export const useHighlightCSS = (code: string) => {
   const isColon = useRef<boolean>(false);
   const isClassOrId = useRef<boolean>(false);
   const isPseudo = useRef<boolean>(false);
+  const isComment = useRef<boolean>(false);
+  const comment = useRef<string>("");
 
   return code.split("").map((piece: string, i) => {
     if (piece === "{" && !isRuleset.current) isRuleset.current = true;
@@ -286,7 +320,21 @@ export const useHighlightCSS = (code: string) => {
       isClassOrId.current = false;
     }
 
-    const className = isString.current
+    comment.current += piece;
+
+    if (comment.current.includes("/*") && !isComment.current) {
+      isComment.current = true;
+      comment.current = "";
+    }
+
+    if (comment.current.includes("*/") && isComment.current) {
+      isComment.current = true;
+      comment.current = "";
+    }
+
+    const className = isComment.current
+      ? "comment"
+      : isString.current
       ? "string"
       : isEscaped.current
       ? useFlip([isEscaped, isString], "string")
