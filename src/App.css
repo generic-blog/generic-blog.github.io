@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 html {
   --ff-primary: "Quicksand", sans-serif;
   --ff-mono: "Fira Code", sans-serif;

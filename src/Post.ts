@@ -1,6 +1,7 @@
 export type Content = {
   type: string;
   content: string;
+  lang?: string;
 };
 
 export type Suggestion = {

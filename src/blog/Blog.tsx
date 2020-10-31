@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, Redirect, useParams } from "react-router-dom";
 
-import { Post } from "../Post";
+import { Content, Post } from "../Post";
 
 import "./blog.css";
 import Code from "./code/Code";
@@ -53,12 +53,18 @@ const Blog: React.FC<Props> = ({ retrieve }) => {
         </div>
       </div>
       <div className="post-content">
-        {post.data.content.map((content: { type: string; content: string }) => {
+        {post.data.content.map((content: Content) => {
           switch (content.type) {
             case "text":
               return <Text text={content.content} key={Math.random()} />;
             case "code":
-              return <Code code={content.content} key={Math.random()} />;
+              return (
+                <Code
+                  code={content.content}
+                  lang={content.lang || "js"}
+                  key={Math.random()}
+                />
+              );
             case "image":
               return (
                 <div className="post-image-container">
